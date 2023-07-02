@@ -46,7 +46,7 @@ def edit_video(video_name, audio_to_add_to_video, logo_to_add_to_video):
     print("Edit color complete.")
     # flip video
     if video_flip == 1:
-        clip.fx(vfx.mirror_x)
+        clip = clip.fx(vfx.mirror_x)
         print("flip video complete.")
     # add audio
     audio_clip = AudioFileClip(path_to_audio + '/' + audio_to_add_to_video).set_duration(clip.duration)
